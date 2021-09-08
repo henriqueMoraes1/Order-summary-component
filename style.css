@@ -1,0 +1,196 @@
+/* ======================= GGOGLE FONTS ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* ===================== VARIABLES ===================== */
+:root{
+     /* =============== COLORS =============== */
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+
+    /* =============== TIPOGRAPH =============== */
+    --font-normal-mobile: 0.9rem;
+    --font-small-mobile: 0.813rem;
+    --font-title-mobile: 1.5rem;
+
+    --font-normal-desktop: 1rem;
+    --font-small-desktop: 0.938rem;
+    --font-title-desktop: 1.8rem;
+}
+
+/* ===================== RESETS ===================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ===================== BASE ===================== */
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('./images/pattern-background-mobile.svg');
+    background-repeat: repeat-x;
+    background-color: var(--Paleblue);
+    font-family: 'Red Hat Display';
+    font-size: var(--font-size-mobile);
+}
+
+/* ===================== REUSABLE CSS ===================== */
+.flex{
+    display: flex;
+}
+
+/* ===================== CONTAINER ===================== */
+.container{
+    max-width: 320px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 0.313rem 25px 0.063rem rgba(51, 21, 201, 0.233);
+}
+
+.top__img{
+    width: 100%;
+    border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.summary{
+    padding: 1.25rem 1.875rem;
+}
+
+.summary__desc{
+    text-align: center;
+}
+
+.desc__title{
+    font-size: var(--font-title-mobile);
+    color: var(--Darkblue);
+    font-weight: 900;
+}
+
+.desc__text{
+    line-height: 1.563rem;
+    color: var(--Desaturatedblue);
+    padding: 1.125rem 0;
+}
+
+.summary__plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 90px;
+    background-color: var(--Verypaleblue);
+    padding: 0.938rem;
+}
+
+.plan__text{
+    font-size: var(--font-small-mobile);
+    color: var(--Desaturatedblue);
+    flex: 1;
+    padding-left: 1.125rem;
+}
+
+.plan__title{
+    color: var(--Darkblue);
+}
+
+.plan__link{
+    font-size: var(--font-small-mobile);
+    text-decoration: underline;
+    color: var(--Brightblue);
+    font-weight: 700;
+}
+
+.plan__link:hover{
+    color: rgba(56, 44, 221, 0.705);
+    text-decoration: none;
+}
+
+.summary__payment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.563rem;
+    padding-top: 1.125rem;
+}
+
+.btn{
+    width: 100%;
+    background-color: var(--Brightblue);
+    padding: 0.938rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.313rem 1.125rem 0.063rem rgba(51, 21, 201, 0.534);
+}
+
+.btn:hover{
+    background-color: rgba(51, 21, 201, 0.534);
+}
+
+.payment__link{
+    font-weight: 700;
+    color: var(--Desaturatedblue);
+}
+
+.payment__link:hover{
+    color: var(--Darkblue);
+}
+
+
+
+@media screen and (min-width:768px){
+
+    body{
+        font-size: var(--font-size-desktop);
+        background: url('./images/pattern-background-desktop.svg');
+        background-repeat: repeat-x;
+        background-color: var(--Paleblue);
+    }
+
+    .container{
+        max-width: 450px;
+    }
+
+    .summary{
+        padding: 3.125rem 3.125rem;
+    }
+    
+    .summary__title{
+        font-size: var(--font-title-desktop);
+    }
+
+    .summary__text{
+        padding: 1.688rem 0;
+    }
+
+    .summary__plan{
+        padding: 1.25rem;
+    }
+
+    .plan__text{
+        font-size: var(--font-small-desktop);
+    }
+
+    .plan__link{
+        font-size: var(--font-small-desktop);
+    }
+    
+    .summary__payment{
+        padding-top: 1.688rem;
+    }
+
+}
+
